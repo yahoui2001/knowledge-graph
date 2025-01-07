@@ -1,0 +1,122 @@
+Prefix(:=<http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3>
+
+Declaration(Class(:Girafe))
+Declaration(Class(:animals))
+Declaration(Class(:branch))
+Declaration(Class(:carnivore))
+Declaration(Class(:harbivore))
+Declaration(Class(:leaf))
+Declaration(Class(:lion))
+Declaration(Class(:omnivore))
+Declaration(Class(:plant))
+Declaration(Class(:tree))
+Declaration(ObjectProperty(:eaten_by))
+Declaration(ObjectProperty(:eats))
+Declaration(ObjectProperty(:is_part-of))
+Declaration(DataProperty(:hasAge))
+Declaration(NamedIndividual(:a_giraffe))
+Declaration(NamedIndividual(:a_lion))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: rdfs:comment (rdfs:comment)
+
+AnnotationAssertion(rdfs:comment rdfs:comment "Plants are disjoints from animals")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :eaten_by (:eaten_by)
+
+SubObjectPropertyOf(:eaten_by owl:topObjectProperty)
+InverseObjectProperties(:eaten_by :eats)
+
+# Object Property: :eats (:eats)
+
+SubObjectPropertyOf(:eats owl:topObjectProperty)
+ObjectPropertyDomain(:eats :animals)
+
+# Object Property: :is_part-of (:is_part-of)
+
+SubObjectPropertyOf(:is_part-of owl:topObjectProperty)
+
+# Object Property: owl:topObjectProperty (owl:topObjectProperty)
+
+SubObjectPropertyOf(owl:topObjectProperty owl:topObjectProperty)
+TransitiveObjectProperty(owl:topObjectProperty)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Girafe (:Girafe)
+
+SubClassOf(:Girafe :harbivore)
+
+# Class: :animals (:animals)
+
+SubClassOf(:animals DataExactCardinality(1 :hasAge xsd:nonNegativeInteger))
+
+# Class: :branch (:branch)
+
+
+# Class: :carnivore (:carnivore)
+
+SubClassOf(:carnivore :animals)
+SubClassOf(:carnivore ObjectSomeValuesFrom(:eats :animals))
+DisjointClasses(:carnivore :harbivore)
+
+# Class: :harbivore (:harbivore)
+
+SubClassOf(:harbivore :animals)
+
+# Class: :leaf (:leaf)
+
+SubClassOf(:leaf ObjectAllValuesFrom(:is_part-of :tree))
+
+# Class: :lion (:lion)
+
+SubClassOf(:lion :carnivore)
+
+# Class: :omnivore (:omnivore)
+
+EquivalentClasses(:omnivore ObjectIntersectionOf(:carnivore :harbivore))
+
+# Class: :plant (:plant)
+
+
+# Class: :tree (:tree)
+
+SubClassOf(:tree :plant)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :a_giraffe (:a_giraffe)
+
+ClassAssertion(:Girafe :a_giraffe)
+
+# Individual: :a_lion (:a_lion)
+
+ClassAssertion(:lion :a_lion)
+DataPropertyAssertion(:hasAge :a_lion "8"^^xsd:nonNegativeInteger)
+
+
+DisjointClasses(:animals :branch :leaf :plant)
+)

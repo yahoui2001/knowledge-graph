@@ -1,0 +1,172 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#hasAge"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#tree"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#is_part-of"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore"
+    }, {
+      "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"
+    }, {
+      "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#branch"
+    }, {
+      "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#leaf"
+    }, {
+      "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#Girafe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_giraffe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#Girafe"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_lion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#hasAge" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "8"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#lion"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#branch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"
+  }, {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eaten_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#hasAge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#is_part-of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#leaf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#lion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#omnivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#tree",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Plants are disjoints from animals"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+} ]

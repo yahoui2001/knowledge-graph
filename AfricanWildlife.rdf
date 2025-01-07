@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:comment>Plants are disjoints from animals</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eaten_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eaten_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#is_part-of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#is_part-of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#hasAge"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#Girafe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#Girafe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#hasAge"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#branch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#branch"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#leaf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#leaf">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#is_part-of"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#lion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#lion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#omnivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#omnivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#tree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#tree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_giraffe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_giraffe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#Girafe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_lion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_lion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#lion"/>
+        <untitled-ontology-3:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</untitled-ontology-3:hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#branch"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#leaf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

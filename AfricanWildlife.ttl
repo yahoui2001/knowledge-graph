@@ -1,0 +1,149 @@
+@prefix : <http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3> .
+
+<http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdfs:comment "Plants are disjoints from animals" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eaten_by
+:eaten_by rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          owl:inverseOf :eats .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#eats
+:eats rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:domain :animals .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#is_part-of
+:is_part-of rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdf:type owl:TransitiveProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#hasAge
+:hasAge rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#Girafe
+:Girafe rdf:type owl:Class ;
+        rdfs:subClassOf :harbivore .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#animals
+:animals rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAge ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:nonNegativeInteger
+                         ] .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#branch
+:branch rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#carnivore
+:carnivore rdf:type owl:Class ;
+           rdfs:subClassOf :animals ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :eats ;
+                             owl:someValuesFrom :animals
+                           ] ;
+           owl:disjointWith :harbivore .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#harbivore
+:harbivore rdf:type owl:Class ;
+           rdfs:subClassOf :animals .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#leaf
+:leaf rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :is_part-of ;
+                        owl:allValuesFrom :tree
+                      ] .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#lion
+:lion rdf:type owl:Class ;
+      rdfs:subClassOf :carnivore .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#omnivore
+:omnivore rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :carnivore
+                                                     :omnivore
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :animals .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#plant
+:plant rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#tree
+:tree rdf:type owl:Class ;
+      rdfs:subClassOf :plant .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_giraffe
+:a_giraffe rdf:type owl:NamedIndividual ,
+                    :Girafe .
+
+
+###  http://www.semanticweb.org/lenovo/ontologies/2025/0/untitled-ontology-3#a_lion
+:a_lion rdf:type owl:NamedIndividual ,
+                 :lion .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :animals
+                :branch
+                :leaf
+                :plant
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
